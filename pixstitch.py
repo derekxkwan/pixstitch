@@ -29,7 +29,7 @@ im = []
 hts = []
 w = 0
 h = 0
-bg = (0,0,0,255)
+bg = (255,255,255,255)
 cur_ims = []
 row_w = 0
 row_h = 0
@@ -53,10 +53,11 @@ for i,arg in enumerate(im_path):
             h+= border
         row_w = 0
         row_h = 0
+        cur_count = 0
         cur_ims = []
 if len(im) > 0:
     new_im = Image.new("RGBA", (w,h))
-       
+
     cur_d = ImageDraw.Draw(new_im)
     cur_d.rectangle([(0,0), (w,h)], bg)
     acc_w = 0
